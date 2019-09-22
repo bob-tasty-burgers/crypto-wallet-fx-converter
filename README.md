@@ -23,13 +23,13 @@ Run the application with:
 java -jar build/libs/crypto-wallet-fx-converter-1.0.jar
 ```
 
-By default the application will try to read the file bobs_crypto.txt in the folder from which you launch the command.
+By default the application will try to read the file `bobs_crypto.txt` in the folder from which you launch the command.
 However, you can also specify a different location for your crypto assets file with:
 ```
 java -jar build/libs/crypto-wallet-fx-converter-1.0.jar /path/to/some/other/crypto/assets/file
 ```
 
-If one of the entries in bobs_crypto.txt is invalid or if no euro exchange rate could be obtained for one of
+If one of the entries in `bobs_crypto.txt` is invalid or if no euro exchange rate could be obtained for one of
 the cryptocurrencies, the application ignores that particular input and writes a message to standard error.
 
 All output is written to standard output. If you don't want to have mixed errors and output in the terminal, you can execute:
