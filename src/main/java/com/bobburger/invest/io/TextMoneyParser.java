@@ -8,12 +8,12 @@ import java.util.regex.Pattern;
 
 public class TextMoneyParser {
     /**
-     * Returns an {@code Optional} with the parsed currency amount, if the text
-     * is a valid currency amount, otherwise returns an empty {@code Optional}.
+     * Returns an {@code Optional} with the parsed Money, if the text
+     * is a valid Money, otherwise returns an empty {@code Optional}.
      *
-     * @param text the possibly invalid text to parse into a currency amount
-     * @return an {@code Optional} with the parsed currency amount, if the text
-     *         is a valid currency amount, otherwise returns an empty {@code Optional}.
+     * @param text the possibly invalid text to parse into a Money
+     * @return an {@code Optional} with the parsed Money, if the text
+     *         is a valid Money, otherwise returns an empty {@code Optional}.
      */
     public static Optional<Money> parse(String text) {
         if(isValidText(text)) {
@@ -22,7 +22,7 @@ public class TextMoneyParser {
             BigDecimal amount = new BigDecimal(parts[1]);
             return Optional.of(new Money(currencyCode, amount));
         } else {
-            System.err.println(String.format("Could not parse currency amount %s", text));
+            System.err.println(String.format("Could not parse text %s into Money", text));
             return Optional.empty();
         }
     }

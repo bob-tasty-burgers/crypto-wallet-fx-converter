@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 public class TextFileMoneyStreamFactory implements MoneyStreamFactory {
-    Path filePath;
+    private Path filePath;
 
     public TextFileMoneyStreamFactory(String filePathString) {
         this.filePath = Paths.get(filePathString);

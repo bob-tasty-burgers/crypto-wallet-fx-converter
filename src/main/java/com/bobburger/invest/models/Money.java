@@ -17,7 +17,7 @@ public class Money {
 
     public Money(String currencyCode, BigDecimal amount) {
         if(currencyCode == null || amount == null || !CURRENCY_PATTERN.matcher(currencyCode).matches()) {
-            throw new IllegalArgumentException("The currencyCode and amount can not be null");
+            throw new IllegalArgumentException("The currencyCode and amount can not be null. Additionally, the currencyCode can only contain upper case letters.");
         }
         this.currencyCode = currencyCode;
         this.amount = amount;
@@ -25,7 +25,7 @@ public class Money {
 
     public static Money sum(Money a, Money b) throws IllegalArgumentException {
         if(a == null || b == null || !a.currencyCode.equals(b.currencyCode)) {
-            throw new IllegalArgumentException("Can only sum moneys with the same (non-null) currency code and non-null amounts");
+            throw new IllegalArgumentException("Can only sum (non-null) moneys with the same currencyCode.");
         }
         return new Money(a.currencyCode, a.amount.add(b.amount));
     }
