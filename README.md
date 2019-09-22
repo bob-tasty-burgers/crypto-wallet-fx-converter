@@ -58,5 +58,5 @@ that they can invest elsewhere. An important part of the insurance business is i
 The HttpClient, available since Java 11, has the non-blocking `sendAsync` method, that returns a CompletableFuture. 
 Using this method would allow to parallelize requests and liberate CPU time for other tasks. However, given the requirements,
 it was considered preferable to have a simpler (albeit less efficient) solution. Indeed, if you are given the task to construct
-a vehicle to commute every day 4 kilometers, it's probably better to build a bicycle and not a roket; although building rockets is
+a vehicle to commute every day 4 kilometers, it's probably better to build a bicycle and not a rocket; although building rockets is
 fun, they are difficult to operate and expensive to maintain!
